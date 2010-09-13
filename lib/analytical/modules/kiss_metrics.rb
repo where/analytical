@@ -49,6 +49,9 @@ module Analytical
         "_kmq.push([\"alias\", \"#{old_identity}\", \"#{new_identity}\"]);"
       end
 
+      def track_click(link_id, title)
+        "_kmq.push(['trackClick', '#{link_id}', '#{title}']);"
+      end
     end
   end
 end
